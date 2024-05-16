@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/Components.js" defer></script>
+    <script src="src/Plugins.js" defer></script>
+    <script src="src/Editor.js" defer></script>
+    <script src="src/Controller.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <div class="w-screen h-screen grid grid-cols-12 bg-stone-900 text-white">
+        <div class="controller col-span-4 p-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima accusamus laboriosam, corrupti amet nobis
+                deleniti quaerat quia veniam magnam assumenda. Aperiam vel veniam sunt recusandae, enim aspernatur saepe
+                odio quae!</p>
+        </div>
+        <div class="editor col-span-8">
+            <iframe class="w-full h-full bg-white" title="editor" srcdoc='
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://cdn.tailwindcss.com" defer></script>
+                <title>Default</title>
+            </head>
+            <body>
+                <!-- Your body content here -->
+            </body>
+            </html>
+            '></iframe>
+        </div>
+</body>
+
+</html>
