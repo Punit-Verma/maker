@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/Ui.js" defer></script>
+    <script src="src/SpawnedList.js" defer></script>
     <script src="src/Components.js" defer></script>
     <script src="src/Plugins.js" defer></script>
     <script src="src/Editor.js" defer></script>
@@ -12,13 +14,30 @@
     <script src="main.js" defer></script>
     <title>Document</title>
 </head>
+<style>
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgb(28 25 23);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #555;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
 
 <body onload="init()">
-    <div class="w-screen h-screen grid grid-cols-12 bg-stone-900 text-white">
-        <div class="controller col-span-4 p-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima accusamus laboriosam, corrupti amet nobis
-                deleniti quaerat quia veniam magnam assumenda. Aperiam vel veniam sunt recusandae, enim aspernatur saepe
-                odio quae!</p>
+    <div class="grid grid-cols-12 bg-stone-900 text-white">
+        <div class="col-span-4 p-3 h-screen flex flex-col divide-y divide-stone-800">
+            <div class="controller grow"></div>
+            <div class="p-3 spawner-list max-h-60 overflow-y-auto">
+            </div>
         </div>
         <div class="editor col-span-8">
             <iframe class="w-full h-full bg-white" title="editor" srcdoc='
